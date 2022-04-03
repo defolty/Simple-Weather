@@ -8,6 +8,9 @@
 import Foundation
 import CoreLocation
 
+// 578251b7c51e994e9e155b46c8559d79
+// old e72ca729af228beabd5d20e3b7749713
+
 protocol WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
     func didFailWithError(error: Error)
@@ -15,8 +18,7 @@ protocol WeatherManagerDelegate {
 
 struct WeatherManager {
     let weatherURL = "https://api.openweathermap.org/data/2.5/weather?appid=578251b7c51e994e9e155b46c8559d79&units=metric"
-    // 578251b7c51e994e9e155b46c8559d79
-    // old e72ca729af228beabd5d20e3b7749713
+    
     var delegate: WeatherManagerDelegate?
     
     func fetchWeather(cityName: String) {
